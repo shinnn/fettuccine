@@ -1,0 +1,45 @@
+{
+  "name": "fettuccine",
+  "version": "1.0.0",
+  "description": "Simplified HTTP(S) client with Promise API, every imaginable option but small file size",
+  "repository": "shinnn/fettuccine",
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+  "scripts": {
+    "pretest": "eslint --config @shinnn/node index.js test.js",
+    "test": "node --harmony_destructuring --throw-deprecation --track-heap-objects test.js",
+    "coverage": "node --harmony_destructuring node_modules/.bin/istanbul cover test.js"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "request",
+    "http",
+    "https",
+    "small",
+    "lightweight",
+    "tiny",
+    "multipurpose",
+    "promise",
+    "promises",
+    "then",
+    "thenable",
+    "class",
+    "get",
+    "put",
+    "patch",
+    "post",
+    "head",
+    "delete"
+  ],
+  "dependencies": {
+    "fettuccine-class": "^1.0.0"
+  },
+  "devDependencies": {
+    "@shinnn/eslint-config-node": "^1.0.1",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
+    "tape": "^4.2.2"
+  }
+}
