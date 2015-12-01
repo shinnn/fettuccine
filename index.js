@@ -17,7 +17,7 @@ module.exports.get = module.exports;
   'head',
   'delete'
 ].forEach(method => {
-  module.exports[method] = (url, options) => module.exports(url, Object.assign(options, {
+  module.exports[method] = (url, options) => module.exports(url, Object.assign({}, options, {
     method: method.toUpperCase()
   }));
 });
