@@ -1,6 +1,6 @@
 {
   "name": "fettuccine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simplified HTTP(S) client with Promise API, every imaginable option but small file size",
   "repository": "shinnn/fettuccine",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
