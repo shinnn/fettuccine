@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/fettuccine.svg)](https://www.npmjs.com/package/fettuccine)
 [![Build Status](https://travis-ci.org/shinnn/fettuccine.svg?branch=master)](https://travis-ci.org/shinnn/fettuccine)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/fettuccine.svg)](https://coveralls.io/r/shinnn/fettuccine)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/fettuccine.svg)](https://coveralls.io/github/shinnn/fettuccine?branch=master)
 [![Dependency Status](https://david-dm.org/shinnn/fettuccine.svg)](https://david-dm.org/shinnn/fettuccine)
 [![devDependency Status](https://david-dm.org/shinnn/fettuccine/dev-status.svg)](https://david-dm.org/shinnn/fettuccine#info=devDependencies)
 
@@ -14,9 +14,6 @@ A simplified HTTP(S) client for [Node](https://nodejs.org/)
 
 ```javascript
 const fettuccine = require('fettuccine');
-
-'use strict';
-const fettuccine = require('.');
 
 fettuccine('https://api.github.com/users/isaacs/repos', {
   qs: {sort: 'created'},
@@ -37,7 +34,7 @@ npm install fettuccine
 ## API
 
 ```javascript
-const ghifyRequest = require('fettuccine');
+const fettuccine = require('fettuccine');
 ```
 
 ### fettuccine(*url* [, *options*])
