@@ -5,9 +5,9 @@
   "repository": "shinnn/fettuccine",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config @shinnn/node index.js test.js",
     "test": "node --harmony_destructuring --throw-deprecation --track-heap-objects test.js",
     "coverage": "node --harmony_destructuring node_modules/.bin/istanbul cover test.js"
+    "pretest": "eslint --fix --config @shinnn/node index.js test.js",
   },
   "license": "MIT",
   "files": [
@@ -37,9 +37,9 @@
     "fettuccine-class": "^1.0.1"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node": "^2.0.0",
-    "eslint": "^2.2.0",
-    "istanbul": "^0.4.2",
-    "tape": "^4.4.0"
+    "@shinnn/eslint-config-node": "^3.0.0",
+    "eslint": "^3.1.1",
+    "istanbul": "^0.4.4",
+    "tape": "^4.6.0"
   }
 }
