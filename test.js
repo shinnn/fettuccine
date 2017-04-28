@@ -1,12 +1,14 @@
 'use strict';
 
-const http = require('http');
+const {createServer} = require('http');
 
 const fettuccine = require('.');
 const {Fettuccine} = fettuccine;
 const {test} = require('tape');
 
-const server = http.createServer(function(req, response) {
+let responded = 0;
+
+createServer(function(req, response) {
   if (req.method === 'POST') {
     req.once('data', data => {
       response.writeHead(200, {'Content-Type': 'application/json'});
@@ -17,12 +19,10 @@ const server = http.createServer(function(req, response) {
     response.end('Body');
   }
 
-  if (++this.responded === 2) {
+  if (++responded === 2) {
     this.close();
   }
 }).listen(8124);
-
-server.responded = 0;
 
 test('fettuccine()', t => {
   t.plan(4);

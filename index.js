@@ -10,16 +10,16 @@ module.exports = function fettuccine(url, options) {
 
 module.exports.get = module.exports;
 
-[
+for (const method of [
   'post',
   'put',
   'patch',
   'head',
   'delete'
-].forEach(method => {
+]) {
   module.exports[method] = (url, options) => module.exports(url, Object.assign({}, options, {
     method: method.toUpperCase()
   }));
-});
+}
 
 module.exports.Fettuccine = Fettuccine;
