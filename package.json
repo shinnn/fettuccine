@@ -1,6 +1,6 @@
 {
   "name": "fettuccine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simplified HTTP(S) client with Promise API, every imaginable option but small file size",
   "repository": "shinnn/fettuccine",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^3.12.2",
+    "eslint": "^3.19.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.3"
   },
