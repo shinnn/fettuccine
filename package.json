@@ -1,48 +1,48 @@
 {
-  "name": "fettuccine",
-  "version": "1.0.3",
-  "description": "Simplified HTTP(S) client with Promise API, every imaginable option but small file size",
-  "repository": "shinnn/fettuccine",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe index.js test.js",
-    "test": "node --throw-deprecation --track-heap-objects test.js",
-    "coverage": "node node_modules/.bin/istanbul cover test.js"
-  },
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "request",
-    "http",
-    "https",
-    "small",
-    "lightweight",
-    "tiny",
-    "multipurpose",
-    "promise",
-    "promises",
-    "then",
-    "thenable",
-    "class",
-    "get",
-    "put",
-    "patch",
-    "post",
-    "head",
-    "delete"
-  ],
-  "dependencies": {
-    "fettuccine-class": "^1.0.1"
-  },
-  "devDependencies": {
-    "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^3.19.0",
-    "istanbul": "^0.4.5",
-    "tape": "^4.6.3"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn/node"
-  }
+	"name": "fettuccine",
+	"version": "1.0.3",
+	"description": "Simplified HTTP client with Promise API, every imaginable option but small file size",
+	"repository": "shinnn/fettuccine",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"scripts": {
+		"pretest": "eslint --fix --format=codeframe index.js test.js",
+		"test": "node --throw-deprecation --track-heap-objects test.js",
+		"coverage": "node node_modules/.bin/istanbul cover test.js"
+	},
+	"license": "ISC",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"request",
+		"http",
+		"https",
+		"small",
+		"lightweight",
+		"tiny",
+		"multipurpose",
+		"promise",
+		"promises",
+		"then",
+		"thenable",
+		"class",
+		"get",
+		"put",
+		"patch",
+		"post",
+		"head",
+		"delete"
+	],
+	"dependencies": {
+		"fettuccine-class": "^1.0.1"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config-node": "^3.0.0",
+		"eslint": "^3.19.0",
+		"istanbul": "^0.4.5",
+		"tape": "^4.6.3"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn/node"
+	}
 }
