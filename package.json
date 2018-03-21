@@ -6,8 +6,7 @@
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"scripts": {
 		"pretest": "eslint --fix --format=codeframe index.js test.js",
-		"test": "node --throw-deprecation --track-heap-objects test.js",
-		"coverage": "node node_modules/.bin/istanbul cover test.js"
+		"test": "nyc --reporter=html --reporter=text node test.js"
 	},
 	"license": "ISC",
 	"files": [
@@ -34,13 +33,13 @@
 		"delete"
 	],
 	"dependencies": {
-		"fettuccine-class": "^1.0.1"
+		"fettuccine-class": "^1.0.5"
 	},
 	"devDependencies": {
-		"@shinnn/eslint-config-node": "^3.0.0",
-		"eslint": "^3.19.0",
-		"istanbul": "^0.4.5",
-		"tape": "^4.6.3"
+		"@shinnn/eslint-config-node": "^5.0.0",
+		"eslint": "^4.19.1",
+		"nyc": "^11.6.0",
+		"tape": "^4.9.0"
 	},
 	"eslintConfig": {
 		"extends": "@shinnn/node"
