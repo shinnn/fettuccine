@@ -10,15 +10,15 @@ module.exports = function fettuccine(url, options) {
 
 module.exports.get = module.exports;
 
-for (const method of [
-	'post',
-	'put',
-	'patch',
-	'head',
-	'delete'
+for (const methodName of [
+	'POST',
+	'PUT',
+	'PATCH',
+	'HEAD',
+	'DELETE'
 ]) {
-	module.exports[method] = (url, options) => module.exports(url, Object.assign({}, options, {
-		method: method.toUpperCase()
+	module.exports[methodName.toLowerCase()] = (url, options) => module.exports(url, Object.assign({}, options, {
+		method: methodName
 	}));
 }
 
