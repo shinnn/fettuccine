@@ -2,24 +2,30 @@
 
 const Fettuccine = require('fettuccine-class');
 
-const fettuccineInstance = new Fettuccine();
+const fettuccine = new Fettuccine({});
 
-module.exports = function fettuccine(url, options) {
-	return fettuccineInstance.get(url, options);
-};
-
-module.exports.get = module.exports;
+module.exports = fettuccine.fetch.bind(fettuccine);
 
 for (const methodName of [
-	'POST',
-	'PUT',
-	'PATCH',
-	'HEAD',
-	'DELETE'
+	'delete',
+	'patch',
+	'post',
+	'put',
+	'head'
 ]) {
-	module.exports[methodName.toLowerCase()] = (url, options) => module.exports(url, Object.assign({}, options, {
-		method: methodName
-	}));
+	Object.defineProperty(module.exports, methodName, {
+		value: fettuccine[methodName].bind(fettuccine),
+		enumerable: true
+	});
 }
 
-module.exports.Fettuccine = Fettuccine;
+Object.defineProperties(module.exports, {
+	CACHE_DIR: {
+		value: Fettuccine.CACHE_DIR,
+		enumerable: true
+	},
+	MINIMUM_REQUIRED_NPM_VERSION: {
+		value: Fettuccine.MINIMUM_REQUIRED_NPM_VERSION,
+		enumerable: true
+	}
+});
